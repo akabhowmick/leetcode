@@ -1,3 +1,8 @@
+// https://leetcode.com/problems/minimum-levels-to-gain-more-points/description/
+// difficulty: medium
+// tags: prefix/postfix, range query
+// Solution, O(n) time O(n) space
+
 
 class Solution {
 

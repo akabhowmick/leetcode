@@ -1,4 +1,10 @@
+// https://leetcode.com/problems/range-sum-query-2d-immutable/description/
+// Difficulty: Medium
+// tags: prefix
 
+// Solution
+// O(n*m) time to construct the prefix square mapping, O(1) to query. O(n*m) space to store the prefix square mapping.
+// Create a prefix sum matrix where each cell represents the sum of the square of elements up and left of it, including that element. To get the sum of a region, we take the cell itself, add the left region, add the top region, and subtract the top left region (which was added twice). To compute a prefix sum, we add the cell to the sum of the left and top regions, and subtract the top left region (which was added twice).
 class NumMatrix {
 
     public int[][] sumMatrix;

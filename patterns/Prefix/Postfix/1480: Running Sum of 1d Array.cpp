@@ -1,4 +1,10 @@
-#include <vector>  // Include the vector header
+// # https://leetcode.com/problems/running-sum-of-1d-array/
+// # difficulty: easy
+// # tags: prefix
+// # problem
+// # Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+
+#include <vector>    // Include the vector header
 using namespace std; // Use the std namespace
 
 class Solution

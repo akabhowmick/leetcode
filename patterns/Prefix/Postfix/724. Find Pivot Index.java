@@ -1,4 +1,9 @@
+// https://leetcode.com/problems/find-pivot-index/description/
+// Difficulty: Easy
+// tags: prefix / postfix
 
+// Solution
+// O(n) time and O(1) space. Maintain a prefix sum and postfix sum. Iterate over the array and check if the prefix sum is equal to the postfix sum. If so, return the index. Otherwise, increment the prefix sum and decrement the postfix sum
 class Solution {
 
     public int pivotIndex(int[] nums) {

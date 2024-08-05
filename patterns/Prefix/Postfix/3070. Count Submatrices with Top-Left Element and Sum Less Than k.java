@@ -1,4 +1,8 @@
+// # https://leetcode.com/problems/count-submatrices-with-top-left-element-and-sum-less-than-k/description/
+// # difficulty: medium
+// # tags: prefix, range query
 
+// # Solution, O(n*m) time and space, can do with just a column prefix array API
 class Solution {
 
     public int[][] sumMatrix;
