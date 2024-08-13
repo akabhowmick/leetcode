@@ -19,3 +19,18 @@ class Solution {
       return answer; 
   }
 }
+
+// O(1) solution 
+class Solution {
+  public int largestAltitude(int[] gain) {
+      int currentHighest = 0; 
+      int currentSum = 0; 
+      for(int i = 1; i < gain.length + 1; i++){
+          currentSum += gain[i-1]; 
+          if(currentSum > currentHighest){
+            currentHighest = currentSum; 
+          }
+      }
+      return currentHighest; 
+  }
+}
