@@ -23,51 +23,54 @@
 // 5. Return the modified list
 
 class Solution {
-  public ListNode reverseKGroup(ListNode head, int k) {
-    // the swaps are happening every node so no swap
-    if(k==1)
-    return head 
-    ListNode temp=head;
-    ListNode prev=null;
-    ListNode next=head.next;
-    ListNode first=null;
-    ListNode nhead=null;
-    // calculate the length using a while loop
-    int len = 0; 
-    while(temp != null){
-    temp = temp.next
-        len++; 
-    }
+    public ListNode reverseKGroup(ListNode head, int k) {
+        // the swaps are happening every node so no swap
+        if(k==1)
+        return head 
+        ListNode temp=head;
+        ListNode prev=null;
+        ListNode next=head.next;
+        ListNode first=null;
+        ListNode nhead=null;
+        // calculate the length using a while loop
+        int len = 0; 
+        while(temp != null){
+        temp = temp.next
+            len++; 
+        }
 
-    // reset temp 
-    temp = head;
-      
-    // number of k groups
-    int cnt=len/k;
-    while(cnt>0){
-        int t=k;
-        if(first==null)
-        first=temp;
-        ListNode end=temp;
-        while(t>0){
-            temp.next=prev;
-            prev=temp;
-            temp=next;
-            if(next!=null)
-            next=next.next;
-            --t;
+        // reset temp 
+        temp = head;
+        
+        // number of k groups
+        int cnt=len/k;
+        while(cnt>0){
+            int t=k;
+            if(first==null)
+            first=temp;
+            ListNode end=temp;
+            // reversing the order within group of k elements 
+            while(t>0){
+                temp.next=prev;
+                prev=temp;
+                temp=next;
+                if(next!=null)
+                next=next.next;
+                --t;
+            }
+            // If this is the first group, nhead is updated to point to the new head of the reversed linked list.
+            if(nhead==null){
+                nhead=prev;
+            }
+            // If it's not the first group, the next pointer of the previous group's last node (first) is linked to the head of the newly reversed group (prev).
+            else{
+                first.next=prev;
+                first=end;
+            }
+            --cnt;
+            prev=null;
         }
-        if(nhead==null){
-            nhead=prev;
-        }
-        else{
-            first.next=prev;
-            first=end;
-        }
-        --cnt;
-        prev=null;
-    }
-    first.next=temp;
-    return nhead;
+        first.next=temp;
+        return nhead;
     }
 }
