@@ -1,0 +1,32 @@
+Prefix Matching	Autocomplete, spell-checking, dictionary validation
+Word Search in Grid	Grid-based word searches (e.g., Word Search II)
+Dictionary and Spell Checking	Spell-check, word validation
+Auto-Completion and Auto-Correction	Search suggestions, typing assistants
+Longest Prefix Matching	URL routing, IP routing, longest common prefix
+Pattern Matching	DNA analysis, text search
+Data Compression	Huffman coding, reducing storage for shared prefixes
+Unique Prefix Finder	Unique abbreviations, domain suggestions
+Counting Words with a Prefix	Word frequency analysis
+Word Suggestions	Product search, dictionary synonyms
+Storing Hierarchical Data	File systems, hierarchical menus
+Autocomplete with Ranked Suggestions	Ranked search suggestions, predictive typing
+Palindrome Pair Detection	Detecting palindrome word pairs
+Text Prediction with n-grams	Predicting words in a sentence, language modeling
+Finding Shortest Unique Prefix	File autocompletion, identifying minimal unique identifiers
+
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.is_end_of_word = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+    
+    def insert(self, word):
+        node = self.root
+        for char in word:
+            if char not in node.children:
+                node.children[char] = TrieNode()
+            node = node.children[char]
+        node.is_end_of_word = True
