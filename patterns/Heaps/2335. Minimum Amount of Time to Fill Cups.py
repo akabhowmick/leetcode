@@ -32,3 +32,7 @@ class Solution:
             return ret - pq[0]
         else:
             return ret
+          
+# Test:
+amount = [1,4,2]
+print(Solution().fillCups(amount)) # Output: 4
