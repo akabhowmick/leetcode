@@ -12,7 +12,7 @@ function strStr(haystack: string, needle: string): number {
       let j = 0;
       while (j < needle.length && haystack[i + j] === needle[j]) {
           j++;
-      }
+      } // only need to update j inside the while loop because as j increases so does i+j 
       if (j === needle.length) {
           return i;
       }
