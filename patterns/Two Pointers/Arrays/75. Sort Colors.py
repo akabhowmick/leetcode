@@ -6,6 +6,9 @@
 
 # You must solve this problem without using the library's sort function.
 
+from typing import List
+
+
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """
