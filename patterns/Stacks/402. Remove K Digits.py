@@ -16,3 +16,8 @@ class Solution:
             st = st[0:-k]
 
         return "".join(st) or "0"
+    
+# Step 1: Build a monotonic increasing stack
+# Step 2: Handle leading zeros
+# Step 3: Handle remaining removals
+# Step 4: Return result
